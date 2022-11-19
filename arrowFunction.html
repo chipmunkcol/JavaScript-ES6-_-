@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Arrow function은 function을 대체하는 신문법이 아님</p>
+
+    <p>
+        함수 쓰는 이유 </br>
+        1.코드들을 기능으로 묶고 싶을때 사용함.</br>
+        2.입출력 기계를 만들고 싶을때 사용(매개변수 => return)   
+    </p>
+
+    <script>
+        
+        const Arrow = (x) => { return x + 1 }
+        const Arrow2 = x => x + 1 // 매개변수 하나일때 소괄호 생략가능 & return + 중괄호 생략가능
+
+        const array = [1,2,3]
+        array.forEach(v => console.log(v)) // 축약하면 더 직관적이게 코드 짤수 있음!
+
+        const object = {
+            함수 : () => {
+                console.log(this)
+            }
+        }
+        object.함수(); // window 출력; 화살표 함수(함수선언식)은 해당 객체영역 this를 가지고오는게 아니라 밖에있는(전역에있는) window값을 가리킴.
+
+    </script>
+
+</body>
+</html>
