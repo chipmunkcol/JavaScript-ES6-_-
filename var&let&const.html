@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>var, let, const의 선언, 할당, 범위</p>
+    <p>
+        var: 재선언o 재할당o 범위(scope)는 function</br>
+        let: 재선언x 재할당o 범위는 {}(블록레벨)</br>
+        const: 재선언x 재할당x 범위는 {}(블록레벨)(but, 재할당이 아닌 object & 배열의 내부값을 변경하는건 가능) 
+    </p>
+<script>
+    var 이름 = 'jack';
+    var 이름 = 'kim';
+    
+    let 이름2 = 'jack';
+    이름2 = 'kim';
+    
+    const 이름3 = { name: 'jack' }
+    이름3.name = 'kim' // 이건 재할당이 아니라 내부값을 변경하는 것! 값 변경은 자유(freeze로 얼린거 아니면)
+    
+    
+</script>
+
+</body>
+</html>

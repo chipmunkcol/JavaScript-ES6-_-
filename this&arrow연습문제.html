@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>this & arrow function 연습문제 3개</p>
+    <button id="button">버튼버튼!</button>
+<script>
+//1. 간단한 메소드 만들기
+// 사람이라는 오브젝트가 하나 있습니다. 
+// 이 오브젝트에 sayHi라는 함수를 (메소드를) 하나 추가하고 싶습니다. 
+// Q. sayHi()라는 함수를 어디서 어떻게 만들면 될까요? 
+
+let people = {
+    name: 'jack',
+    sayHi: function() {
+        console.log(this.name)
+    }
+}
+people.sayHi();
+
+// 또는
+// let people = {
+//     name: 'jack',
+//     sayHi: () => {
+//         console.log(people.name)
+//     }
+// }
+// people.sayHi();
+
+
+// 2. 오브젝트 내의 데이터를 전부 더해주는 메소드만들기
+// 그런데 이 오브젝트에 전부더하기() 라는 함수를 하나 만들어서 사용하고 싶습니다.
+
+let object = {
+    data: [1,2,3,4,5]
+}
+// object.전부더하기();
+
+let objectSum = () => {
+    let sum = 0;
+    object.data.forEach((v)=>{
+        sum += v
+    })
+    console.log(sum)
+}
+
+
+// 3. setTimeout 이용해보기
+// 버튼을 클릭하면 지금 누른 버튼에 담긴 글자를 출력하는 기능을 만들고 싶어서 이렇게 코드를 짰습니다.
+// Q. 그럼 setTimeout을 이용해서 1초 후에 this.innerHTML을 콘솔창에 출력하고 싶으면 어떻게 코드를 수정해야할까요?
+
+document.getElementById('button').addEventListener('click', function(){
+    setTimeout(()=>console.log(document.getElementById('button').innerHTML), 1000)
+})
+
+
+
+
+</script>
+
+</body>
+</html>
