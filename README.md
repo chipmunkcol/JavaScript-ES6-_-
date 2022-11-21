@@ -11,3 +11,7 @@
 4. this & arrow function 연습문제 3개
 
 5. 변수 신문법 총정리 1. var let const와 선언,할당,범위
+
+6. 변수 신문법 총정리 2. Hoisting, 전역변수, 참조
+
+7. 변수 연습문제 6개
