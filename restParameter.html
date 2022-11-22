@@ -14,6 +14,16 @@
     </p>
 
 <script>
+    function 함수(...parameters){
+        console.log(parameters)
+    }
+    함수(1,2,3,4);
+
+    function 함수2(a,b, ...parameters){ // arguments반복문 돌리는거랑 다르게 어디서부터 가져올지 정할 수 있음!
+        console.log(parameters)
+    }
+    함수2(1,2,3,4) // [3,4]
+
     
 
 
