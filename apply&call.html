@@ -9,13 +9,34 @@
 <body>
     <p>
         Spread Operator 활용방법 2 & apply, call 함수 알아보기</br>
-
+        
+        1. 다른 function 값 가져오기 </br>
+        2. 함수 파라미터 넣을 때(가끔)
     </p>
-    
+
 <script>
+    function 더하기(a,b,c){
+        console.log(a+b+c)
+    }
+    더하기(1,2,3)
 
+    let array = [1,2,3];
+    더하기(...array) // 더하기(array[1], array[2], array[3]) 이거 대신 사용
 
+    let person = {
+        name : 'jack',
+        인사 : function(){
+            console.log(this.name + '안녕')
+        }
+    }
 
+    let person2 = {
+        name : 'kim'
+    }
+
+    person.인사();
+    person.인사.apply(person2); // person2에는 인사 function이 없지만 person2에 인사()를 넣은 문법 신기
+    person.인사.call(person2); // 위랑 파라미터 넣는 방식만 다름 apply는 array 형태로, call은 그냥
 
 
 </script>

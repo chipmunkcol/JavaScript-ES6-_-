@@ -23,3 +23,7 @@
 10. 모든 괄호를 없애주는 Spread Operator 활용방법
 
 11. Spread Operator 활용방법 2 & apply, call 함수 알아보기
+
+12. 자바스크립트 함수 업그레이드하기 (default parameter/arguments)
+
+13. 함수에서 쓰는 점3개 Rest 파라미터를 알아봅시다 
