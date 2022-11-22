@@ -15,3 +15,11 @@
 6. 변수 신문법 총정리 2. Hoisting, 전역변수, 참조
 
 7. 변수 연습문제 6개
+
+8. 자바스크립트가 문자 다루는 신기한 방법(Template literals)
+
+9. Template literals / tagged literals 연습문제 2개
+
+10. 모든 괄호를 없애주는 Spread Operator 활용방법
+
+11. Spread Operator 활용방법 2 & apply, call 함수 알아보기

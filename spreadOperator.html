@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<p>spread operator </br>
+    1. Array에 붙이면 대괄호를 제거해줍니다.</br>
+    2. String에 붙이면 문자를 하나하나 나눠줍니다.</br>
+    3. => Array & object Deep copy 할 때 씁니다.(합칠때도 편하긴함)</br>
+    4. => Array, Object는 reference data type 이기 때문에 값 복사 할땐 deep copy 필수! 
+</p>
+
+<script>
+    let array = ['hello', 'world'];
+    console.log(array)
+    console.log(...array)    
+
+    let string = 'helloWorld'
+    console.log(...string)
+    //밑에랑 동일! 개편함
+
+    let arrayEmpty = [];
+    for(let i=0; i<string.length; i++){
+        arrayEmpty.push(string[i])
+    }
+    console.log(...arrayEmpty)
+
+    // 가볍게 합칠 때 좋고
+    let a = [1,2,3]
+    let b = [4,5]
+    let c = [...a, ...b]
+    console.log(c) //[1,2,3,4,5]
+
+    // ★사실 Deep copy 이거 하려고 많이씀
+    let d = [1]
+    let e = d;
+
+    d[1] = 2;
+    console.log(d)
+    console.log(e) // e는 값 추가 안했는데 [1,2] 로 d와 값이 같음 = 값의 공유가 일어남
+
+
+    //but 이렇게 deep copy 하면 독립적으로 값을 가짐
+    let f = [...d]
+    d[2] = 3;
+    console.log(d) // [1,2,3]
+    console.log(f) // [1,2]
+
+    // object도 똑같이 deep copy 하면 됨!
+    let o1 = {
+        a: 1,
+        b: 2
+    }
+    let o2 = {
+        c: 3
+    }
+    let o3 = {
+        ...o1,
+        ...o2
+    }
+    console.log(o3)
+
+</script>
+
+</body>
+</html>
