@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<script>
+
+// Q1
+    var a = [1,2,3];
+    var b = '김밥';
+    var c = [...b, ...a]
+    console.log(c)  // ['김','밥',1,2,3,] 
+    // string은 spread 문법쓰면 글자 하나씩 배열 담기는거 맞지? 
+
+// Q2
+    var a = [1,2,3];
+    var b = ['you', 'are'];
+    var c = function(a,b){
+        console.log([[...a], ...[...b][1]]) // [1,2,3,y,o,u]
+    }
+    c(a,b);
+
+// Q3
+    function 함수(a = 5, b = a * 2){
+        console.log(a + b); // (3 + 6) = 9  -> b 없으니까 default값 가져오고
+        return 10 // 콘솔에는 안찍히지만 10 남는거 아닌가?
+    }
+    함수(3) 
+
+// Q4
+    function 함수(a = 5, b = a * 2){
+        console.log(a + b) // (5 + 10) = 15 -> undefined면 없는거로 치는건가?
+    }
+    함수(undefined, undefined)
+
+// Q5. array를 만들어주는 함수를 제작하고 싶습니다
+    function 어레이(){
+        for(let i = 0; i<arguments.length; i++){
+            arguments[i]
+        }
+    }
+    var newArray = 어레이(1,2,3,4,5)
+    console.log(newArray)
+
+// Q6. 최댓값 구하기
+    Math.max(5,6,4,3)
+    var numbers = [2,3,4,5,6,1,3,2,5,5,4,6,7];
+
+    Math.max(...numbers)
+
+// Q7.글자를 알파벳순으로 정렬해주는 함수를 만들고 싶습니다.
+    console.log(['b','c','a'].sort()); // ['a','b','c']
+
+    function 정렬(){
+        console.log(...arguments.sort())
+    }
+    정렬('bear')
+
+// Q8.데이터마이닝 기능 만들기 
+    function 글자세기(){
+        
+    }
+
+
+</script>
+
+</body>
+</html>

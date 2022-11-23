@@ -27,3 +27,5 @@
 12. 자바스크립트 함수 업그레이드하기 (default parameter/arguments)
 
 13. 함수에서 쓰는 점3개 Rest 파라미터를 알아봅시다 
+
+14. Spread, rest 파라미터 연습문제 8개
