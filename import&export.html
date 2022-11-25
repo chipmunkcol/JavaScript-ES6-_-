@@ -1,0 +1,26 @@
+
+<!-- 자바스크립트는 이게 제일 호환성 좋음! -->
+<script src="library.js"></script>
+
+
+<!-- 근데 react나 vue등에서 쓰니까 알아두셈, ES6의 import/export -->
+<script type="module">
+
+    // 하나만 받아올 때
+    // import 작명가능 from '/library.js'
+    // console.log(작명가능)
+
+    // 여러개 받아올 때
+    import 작명가능, {a, b, c} from './library.js'
+    
+    console.log(a, b) //변수 작명 불가능
+    console.log(c)  
+    console.log(작명가능) // 40;
+
+    import {a as 작명가능2} from './library.js'
+    import * as 작명가능3 from './library.js'
+     
+    console.log(작명가능2) // 10;
+    console.log(작명가능3.a) // 10;
+    console.log(작명가능3.b) // 20;
+</script>

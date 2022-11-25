@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<script>
+    function 기계(이름){
+        this.name = 이름;
+        this.age = 20;
+        this.sayHi = function(){
+            console.log('안뇽' + this.name)
+        }
+    }
+    기계.prototype.gender = '남'
+    // 부모요소 유전자에 gender를 추가하면 
+    // 학생1은   학생1을 출력하면 gender 속성이 없지만
+    // 학생1.gender 는 '남'이 출력된다.
+    let 학생1 = new 기계('jack');
+
+    //JS 동작원리 때문인데
+    //(1) 학생1이 직접 gender를 가지고 있는가?
+    //(2) 없으면 그 다음인 부모 유전자가 gender를 가지고 있는가? => 그럼 실행!
+    // => object가 이런 순서로 자료를 출력하기 때문! 
+
+
+    let arr = [1,2,3];
+    arr.sort()
+    arr.map()
+    arr.push() // 이런 메서드 어떻게 쓰는거임??
+    
+    //prototype 동작원리
+    // -내장함수는 어떻게 동작하는가?
+    //  let arr = [1,2,3]; 우리는 이렇게 만드는데 컴퓨터는 아래처럼 만듬
+    //  let arr = new Array(1,2,3,); // 객체 상속
+    // => 따라서 부모 요소의 (window객체) 속성을 사용할 수 있는것!
+
+</script>
+
+
+</body>
+</html>
