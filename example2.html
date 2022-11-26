@@ -1,0 +1,19 @@
+<script>
+function 더하기공장(x) {
+    function 덧셈(y){
+        return x + y;
+    }
+    return 덧셈;
+}
+
+let 더하기1 = 더하기공장(1);
+console.log(더하기1(1));
+console.log(더하기1(2));
+
+let 더하기2 = 더하기공장(2);
+console.log(더하기2(1));
+console.log(더하기2(2));
+
+
+
+</script>
