@@ -35,3 +35,11 @@
 16. import / export 를 이용한 파일간 모듈식 개발
 
 17. Stack, Queue를 이용한 웹브라우저 동작원리
+
+18. 동기/비동기처리와 콜백함수라는 용어 깔끔하게 정리
+
+19. ES6 Promise 간단 연습문제
+
+20. Promise 어려워서 싫으면 async/await을사용합시다
+
+21. Web Components : 커스텀 HTML 태그 만들기
