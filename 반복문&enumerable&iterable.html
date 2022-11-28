@@ -1,0 +1,41 @@
+<script>
+
+// 객체 전용인 for in 반복문
+
+let object = {name:'jack', age:20}
+for (let key in object) {
+    console.log(object) // {name:'jack', age:20} 2번 반복(object 갯수만큼)
+    console.log(object[key]) // jack, 20
+}
+
+특징
+// 1. enumerable 한 것만 반복(셀수 있는거, 열거 가능한거)
+// 2. 부모의 prototype 도 반복(쓸데없음 덕분에 부모 있으면 hasownproperty 메서드로 본인 것만 돌려야됨)
+
+class 부모{
+
+}
+부모.prototype.name = 'kim'
+let object2 = new 부모();
+
+for (let key in object2) {
+    console.log(object2[key]) // kim (부모의 value값을 출력)
+    if(object2.hasOwnProperty(key)){
+        console.log(object2[key]) // undefined => hasOwnProperty() 값은 true or false로 부모 값 제거해서 undefined 출력 
+    }
+}
+
+
+// for of 는 iterable한 자료형에만 사용가능
+let array = [1,2,3,4];
+for (let val of array) {
+    console.log(val) // 1, 2, 3, 4 돌면서 하나씩 찍히는데 map이 더 편한거 같은디
+}
+
+let string = 'abcd';
+for (let val of string) {
+    console.log(val) // 'a', 'b', 'c', 'd' 뭐 문자도 잘 돌아가니까 알아두긴하자.
+}
+
+
+</script>

@@ -43,3 +43,5 @@
 20. Promise 어려워서 싫으면 async/await을사용합시다
 
 21. Web Components : 커스텀 HTML 태그 만들기
+
+22. for in / for of 반복문과 enumerable, iterable 속성
